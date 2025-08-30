@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #191818;
+    color: aliceblue;
+    font-family: 'Segoe UI', sans-serif;
+}
+.content{
+    margin: 40px;
+    background-color: #9c9c9c22;
+    border: 3px solid #7373736d;
+    border-radius: 20px;
+    box-shadow: 0 0 10px white;
+}
+nav{
+    background: #7671b707;
+    display: flex;
+    padding: 20px;
+}
+.logo{
+    padding-left: 20px;
+    color: #4a3ce1;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+.logo_span{
+    color: white;
+}
+.links{
+    display: flex;
+    gap: 2rem;
+    margin: auto;
+}
+.links li{
+    list-style: none;
+}
+.links li a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+.links li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #4a3ce1;
+    transition: width 0.3s ease;
+}
+.links li a:hover{
+    color: #4a3ce1;
+}
+.links li a:hover::after{
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+.text_div{
+    margin: 90px;
+}
+.text_div h1, .header_logo {
+    font-size: 3rem; /* Corrected unit */
+    color: #4a3ce1;
+}
+.text_div p{
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.text_div .header_logo {
+    color: #4a3ce1; /* Ensure color is applied */
+    margin: 20px; /* Margin is fine, but check if it's affecting layout */
+}
+.icon{
+    margin-top: 25px;
+}
+.icon i{
+    margin-right: 11px;
+    color: #4a3ce1;
+    border: 3px solid #4a3ce1;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #4a3ce1;
+    transition: 0.3s;
+}
+.icon i:hover{
+    transform: scale(1.4);
+    background-color: #4a3ce1;
+    color: #191818;
+}
+/*button{
+    color: #4a3ce1;
+    background: #19181800;
+    border: 3px solid #4a3ce1;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #4a3ce1;
+}
+button:hover{
+    transform: scale(1.2);
+    background-color: #4a3ce1;
+    color: #191818;
+}*/
+.img_div img{
+    width: 450px;
+    height: 450px;
+    margin: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 200px #4a3ce1;
+    transition: 0.5s;
+}
+.img_div img:hover{
+    transform: scale(1.13);
+}
+@media (max-width: 1024px) {
+    header{flex-direction: column;
+    text-align:  center;
+    }
+    .text_div{
+        margin: 2rem auto ;
+    }
+    .img_div img{
+        width: 60%;
+        height: auto;
+        margin: 2rem auto;
+    }
+}
+@media (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .links{
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .text_div h1,.header_logo{
+        font-size: 2.5rem;
+    }
+    .text_div p{
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    /*button{
+        width: 70%;
+        font-size: 1rem;
+    }*/
+    .img_div img{
+        width: 80%;
+        max-width: 300px;
+    }
+}
+@media (max-width: 480px) {
+    .text_div h1,.header_logo{
+        font-size: 2rem;
+    }
+    .text_div p{
+        font-size: 1rem;
+    }
+    .icon i{
+        font-size: 1.2rem;
+        padding: 0.4rem;
+    }
+    /*button{
+        width: 90%;
+        font-size: 0.9rem;
+    }*/
+    .img_div img{
+        width: 90%;
+        max-width: 250px;
+    }
+}
